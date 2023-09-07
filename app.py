@@ -32,5 +32,5 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
-st.titll('Hello, World!')
+st.title('Hello, World!')
 
