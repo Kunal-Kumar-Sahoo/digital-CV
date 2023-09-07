@@ -58,3 +58,11 @@ with col2:
         mime='application/octet-stream',
     )
     st.write(':email:', EMAIL)
+
+
+# --- SOCIAL LINKS ---
+st.write('#')
+cols = st.columns(len(SOCIAL_MEDIA))
+
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    cols[index].write(f'[{platform}]({link})')
