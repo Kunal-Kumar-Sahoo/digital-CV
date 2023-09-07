@@ -111,7 +111,17 @@ st.write(
 
 
 # --- SKILLS ---
-
+st.write('#')
+st.subheader('Skills')
+st.write(
+    '''
+- **Programming Languages:** Python, Julia, R, Java, C, MATLAB
+- **Databases:** MySQL, MariaDB, SQLite, MongoDB
+- **Libraries/Frameworks:** NumPy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, PyTorch, NLTK, Transformers, Streamlit, Flask, Librosa, PyBullet, ROS, Arduino
+- **Developer Tools:** GNU/Linux, Git, Docker
+- **Other**: LaTeX, Bash
+'''
+)
 
 # --- PROJECTS ---
 st.write('#')
