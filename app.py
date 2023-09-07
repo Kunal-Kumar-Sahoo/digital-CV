@@ -66,3 +66,45 @@ cols = st.columns(len(SOCIAL_MEDIA))
 
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f'[{platform}]({link})')
+
+
+# --- EXPERIENCE & QUALIFICATIONS ----
+st.write('#')
+st.subheader('Education')
+
+cols = st.columns(4)
+cols[0].write('🎓 **B.Tech in Computer Engineering**')
+cols[1].write('*Pandit Deendayal Energy University*')
+cols[2].write('2021--Present')
+cols[3].write('CGPA: 9.89/10')
+
+cols = st.columns(4)
+cols[0].write('🎓 **Class XII (CBSE)**')
+cols[1].write('*Kendriya Vidyalaya No. 1, Gandhinagar*')
+cols[2].write('2021')
+cols[3].write('Percentage: 94.8%')
+
+cols = st.columns(4)
+cols[0].write('🎓 **Class X (CBSE)**')
+cols[1].write('*Kendriya Vidyalaya No. 1, Gandhinagar*')
+cols[2].write('2019')
+cols[3].write('Percentage: 94.4%')
+
+st.write('#')
+st.subheader('Experience')
+st.write(
+    '''
+- ✅ Junior Research Fellow @ School of Petroleum Technology, PDEU (July 2023 -- Present)
+    - Working on applying transfer learning to identify sucker rod pump anomaly from dynacards
+    - Project sponsored by *Shell*
+- ✅ R&D Intern @ Jio, RIL (June 2023 -- August 2023)
+    - Developed library to fit skeletons in 3D meshes
+    - Developed library to animate 3D objects using Linear Skinning
+- ✅ Summer Research Intern @ Advanced Technology Development Centre, IIT Kharagpur (May 2023 -- June 2023)
+    - Worked on the problem statement *Native Language Identification from Non-Native speech*
+    - Incorportated *XAI methods* to develop interpretable models
+- ✅ Student Researcher @ Student Research Program, PDEU (October 2022 -- Present)
+    - Developing a real-time posture monitoring system using computer vision
+    - Building a modular device that can be connected to laptop/desktop
+'''
+)
