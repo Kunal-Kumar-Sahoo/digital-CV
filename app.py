@@ -5,7 +5,7 @@ from PIL import Image
 
 # --- PATH SETTINGS ---
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-css_file = current_directory / 'styles' / 'main.css'
+# css_file = current_directory / 'styles' / 'main.css'
 resume_file = current_directory / 'assets' / 'Kunal Resume.pdf'
 profile_pic = current_directory / 'assets' / 'profile.jpeg'
 
@@ -18,9 +18,10 @@ Computer Science undergraduate, exploring the domains of Artificial Intelligence
 '''
 EMAIL = 'kunal.sahoo2003@gmail.com'
 SOCIAL_MEDIA = {
-    'LinkedIn': 'https://linkedin.com/in/kunal-kumar-sahoo/',
-    'Twitter': 'https://twitter.com/KunalKSahoo/',
-    'GitHub': 'https://github.com/Kunal-Kumar-Sahoo/'
+    'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://linkedin.com/in/kunal-kumar-sahoo/',
+    'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/KunalKSahoo/',
+    'https://www.svgrepo.com/show/503359/github.svg': 'https://github.com/Kunal-Kumar-Sahoo/',
+    'https://www.svgrepo.com/show/489456/email.svg': 'mailto:kunal.sahoo2003@gmail.com'
 }
 PROJECTS = {
     'PyCoWINAPI: Python wrapper around CoWIN API for finding vaccination slots': 'https://github.com/Kunal-Kumar-Sahoo/PyCowinAPI',
@@ -32,10 +33,7 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
-# --- LOAD CSS, PDF & PROFILE PIC ---
-with open(css_file, 'r') as f:
-    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
+# --- LOAD PDF & PROFILE PIC ---
 with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
 
@@ -57,7 +55,6 @@ with col2:
         file_name=resume_file.name,
         mime='application/octet-stream',
     )
-    st.write(':email:', EMAIL)
 
 
 # --- SOCIAL LINKS ---
@@ -65,7 +62,7 @@ st.write('#')
 cols = st.columns(len(SOCIAL_MEDIA))
 
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f'[{platform}]({link})')
+    cols[index].write(f'<a href="{link}"><img src="{platform}" alt="HTML tutorial" style="width:42px;height:42px;"></a>', unsafe_allow_html=True)
 
 
 # --- EXPERIENCE & QUALIFICATIONS ----
@@ -126,6 +123,18 @@ st.write(
 # --- PROJECTS ---
 st.write('#')
 st.subheader('Projects')
-st.write('---')
 for project, link in PROJECTS.items():
     st.write(f'[{project}]({link})')
+
+
+# ---CO-CURRICULARS---
+st.write('#')
+st.subheader('Co-Curricular Activities')
+st.write(
+    '''
+- **President** @ *Cretus: The Robotics & Automation Club of PDEU*
+- **Lead** @ *Google Developers Students' Club, PDEU*
+- **Vice-Chairperson** @ *Association of Computing Machinery, PDEU*
+- **AI/ML Head** @ *Encode: The Computer Science Club of PDEU*
+'''
+)
