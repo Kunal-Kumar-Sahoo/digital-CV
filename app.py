@@ -108,3 +108,14 @@ st.write(
     - Building a modular device that can be connected to laptop/desktop
 '''
 )
+
+
+# --- SKILLS ---
+
+
+# --- PROJECTS ---
+st.write('#')
+st.subheader('Projects')
+st.write('---')
+for project, link in PROJECTS.items():
+    st.write(f'[{project}]({link})')
